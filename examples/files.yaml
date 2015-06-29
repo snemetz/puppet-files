@@ -1,0 +1,63 @@
+---
+
+# Set defaults
+
+# Put in location / env files
+
+# Global defaults
+files_default_ensure       : present
+#files_default_backup       :
+#files_default_force        :
+files_default_group        : root
+#files_default_ignore       :
+#files_default_mode         :
+files_default_owner        : root
+#files_default_purge        :
+#files_default_recurse      :
+#files_default_recurselimit :
+#files_default_replace      :
+#files_default_sourceselect :
+
+files_list_default:
+  - root 
+
+files_list_mongo:
+  - profile-mongome.csh
+  - profile-mongome.sh
+
+files_list_mysql:
+  - profile-mysqlme.csh
+  - profile-mysqlme.sh
+
+files_list_root:
+  - profile-rootme.csh
+  - profile-rootme.sh
+
+# Doc all fields
+
+files_defs:
+  profile-mongome.csh:
+    source: bn_site/profile.d/mongome.csh
+    path  : /etc/profile.d/mongome.csh
+    mode  : '0555'
+  profile-mongome.sh:
+    source: bn_site/profile.d/mongome.sh
+    path  : /etc/profile.d/mongome.sh
+    mode  : '0555'
+  profile-mysqlme.csh:
+    source: bn_site/profile.d/mysqlme.csh
+    path  : /etc/profile.d/mysqlme.csh
+    mode  : '0555'
+  profile-mysqlme.sh:
+    source: bn_site/profile.d/mysqlme.sh
+    path  : /etc/profile.d/mysqlme.sh
+    mode  : '0555'
+  profile-rootme.csh:
+    source: bn_site/profile.d/rootme.csh
+    path  : /etc/profile.d/rootme.csh
+    mode  : '0555'
+  profile-rootme.sh:
+    source: bn_site/profile.d/rootme.sh
+    path  : /etc/profile.d/rootme.sh
+    mode  : '0555'
+
