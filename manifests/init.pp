@@ -35,5 +35,5 @@ class files {
     notify { "FILES not array of hash keys ${files_keys} --- ${files_defs}": }
   }
   # Realize the default files list
-  files::list{'default':}
+  #files::list{'default':}
 }
